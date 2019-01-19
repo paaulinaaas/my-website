@@ -1,44 +1,59 @@
-@import "../common/base";
-
 .portfolio {
   &__list {
     padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
   }
   &__item {
-    position:relative;
-    width: 33.3%;
-    padding-top:340px;
-    box-sizing:border-box;
-    overflow:hidden;
-    img {
-      position:absolute;
-      top:0;
-      left:-100%; right:-100%;
-
-      transform-origin:50% 0;
-      transform:scale(1.2);
-      transition:transform .3s ease-out;
-      &:hover {
-        transform: scale(1);
-      }
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0.125rem;
+    @media #{$mediaSmall} {
+      width: 50%;
+    }
+    @media #{$mediaLarge} {
+      width: 33.3%;
     }
 
+    img {
+      transition: all .2s ease-in;
+    }
+    &:hover {
+      .portfolio__info {
+        opacity: 1;
+      }
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__info {
+    position: absolute;
+    font-family: $font2;
+    font-weight: bold;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+    background: $color-grey;
+    color: $light;
+
+    opacity: 0;
+    transition-delay: .2s;
+    transition: all .3s ease-out;
+
+  }
+  &__list {
+    border-radius: 5px;
+    padding: 0.5rem;
   }
 }
-
-//<section class="portfolio">
-//<ul class="portfolio__list">
-//<li class="portfolio__item">
-//<img src="./img/masterlab.jpg">
-//</li>
-//<li class="portfolio__item">
-//<img src="./img/masterlab.jpg">
-//</li>
-//<li class="portfolio__item">
-//<img src="./img/masterlab.jpg">
-//</li>
-//</ul>
-//</section>

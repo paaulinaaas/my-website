@@ -1,0 +1,21 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  min-height: 3.3125rem;
+  line-height: 3.3125rem;
+  z-index: 100;
+  background: $light;
+  border-bottom: 0.0625rem solid $color-light-grey;
+  transition: transform 0.25s ease-in-out;
+  @media #{$mediaMedium} {
+    border-bottom: none;
+  }
+}
+
+.header-unpin{
+  transform: translateY(-4rem);
+}
+.header-pin{
+  transform: translateY(0);
+}
