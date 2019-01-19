@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		body {
+			background-color: #222222;
+			font-size: 24px;
+			color: #fff;
+		}
+
+.clouds {
+  width:560px;
+  height:260px;
+  background:url('clouds.png') no-repeat;
+}
+
+@keyframes cloudsmove
+{
+  0% { background-position:0 0; }
+  100% { background-position:0 -2600px; }
+}
+#cloud1 {
+  animation:cloudsmove 4s steps(10) infinite;
+  transition: : cloudsmove ease-in 3s;
+}
+	</style>
+
+
+</head>
+<body>
+
+  <div id="cloud1" class="clouds"></div>
+
+</body>
+</html>

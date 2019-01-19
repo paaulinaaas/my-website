@@ -1,0 +1,34 @@
+.balls-container {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+  }
+  .ball {
+    position: absolute;
+    border-radius: 50%;
+    border: 0.125em solid #fff;
+    &:first-child {
+      background: #DFE8EA;
+      top: 1rem;
+      left: 6rem;
+      width: 11em;
+      height: 11em;
+      animation: big-ball 6s infinite alternate ease-in;
+    }
+    &:nth-child(2) {
+      background: #2D87A5;
+      width: 8em;
+      height: 8em;
+      top: 3rem;
+      left: 1rem;
+      animation: medium-ball 6s infinite alternate ease-in;
+    }
+    &:nth-child(3) {
+      background: #2D87A5;
+      width: 5em;
+      height: 5em;
+      top: 9rem;
+      left: 4.5rem;
+      animation: small-ball 6s infinite alternate ease-in;
+    }
+  }

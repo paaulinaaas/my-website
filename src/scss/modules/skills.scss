@@ -1,0 +1,57 @@
+@import "../common/base";
+@import "../common/variables";
+
+.skills {
+  box-sizing: border-box;
+  h3 {
+    font-size: 22px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    @include center;
+    flex-wrap: wrap;
+
+  }
+  &__article {
+    box-sizing:border-box;
+    position: relative;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    text-align: justify;
+    @media #{$mediaSmall} {
+      width: 50%;
+    }
+    @media #{$mediaMedium} {
+      width: 33.3%;
+    }
+    @media #{$mediaLarge} {
+      width: 25%;
+    }
+  }
+  &__box {
+    height: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    width: 150px;
+    height: 150px;
+
+    transition: .5s;
+    position: absolute;
+    left: calc(50% - 75px);
+    bottom: calc(50% - 75px);
+    @media #{$mediaMedium} {
+      opacity: 0.1;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

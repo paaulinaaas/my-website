@@ -1,0 +1,71 @@
+@import "../common/base";
+@import "../common/variables";
+
+.about {
+  @include center;
+  background: url(../img/background3.jpg)no-repeat;
+  background-size: cover;
+  padding: 6rem 1rem;
+  background-attachment: fixed;
+  @media #{$mediaMedium} {
+    padding: 4rem 2rem;
+  }
+  &__container {
+    @include center;
+    flex-direction: column;
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    border: 4px solid #DFE8EA;
+    outline: 4px solid #DFE8EA;
+    outline-offset: 8px;
+    .balls-container {
+      display: none;
+      @media #{$mediaMedium} {
+        display: block;
+        top: -4.5rem;
+        right: 0;
+        padding: 4rem;
+      }
+    }
+  }
+  &__text {
+    text-align: justify;
+    margin: 0.6rem 0;
+  }
+  &__img {
+    width: 160px;
+    margin: 0.75rem;
+    border-radius: 50%;
+    border: 4px solid #DFE8EA;
+    border-radius: 50%;
+
+  }
+}
+
+@keyframes small-ball {
+  0% {background-color: #2D87A5;
+    transform:translate(0px, 0px);
+  }
+  100% {background-color: #D7DAD9;
+    transform: translate(5px, 10px);
+  }
+}
+@keyframes medium-ball {
+  0% {background-color: #2D87A5;
+    transform:translate(0px, 0px);
+  }
+  100% {background-color: #305A8A;
+    transform: translate(2px, -15px);
+  }
+}
+@keyframes big-ball {
+  0% {background-color: #DFE8EA;
+    transform:translate(0px, 0px);
+  }
+  100% {background-color: #38476E;
+    transform: translate(-5px, 5px);
+  }
+}
