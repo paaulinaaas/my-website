@@ -1,11 +1,10 @@
 @import "../common/base";
-@import "../common/variables";
 
 .about {
   @include center;
   background: url(../img/background3.jpg)no-repeat;
   background-size: cover;
-  padding: 6rem 1rem;
+  padding: 4rem 1rem;
   background-attachment: fixed;
   @media #{$mediaMedium} {
     padding: 4rem 2rem;

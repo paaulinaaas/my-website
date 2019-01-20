@@ -29,16 +29,16 @@
             </div>
             <ul class="nav__list u-uppercase">
                 <li class="nav__item">
-                    <a class="nav__link" href="#">about me</a>
+                    <a class="nav__link" href="#hero">about me</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="#">skills</a>
+                    <a class="nav__link" href="#skills">skills</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="#">portfolio</a>
+                    <a class="nav__link" href="#portfolio">portfolio</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="#">contact</a>
+                    <a class="nav__link" href="#contact">contact</a>
                 </li>
             </ul>
         </nav>
@@ -46,7 +46,7 @@
 </header>
 <main>
     <div class="wrapper">
-        <section class="hero">
+        <section class="hero" id="hero">
             <img class="hero__img" src="./img/blue-square.jpg" alt="">
             <div class="balls-container">
                 <span class="ball"></span>
@@ -57,12 +57,12 @@
             <h2 class="hero__subtitle">Junior Frontend Developer</h2>
             <ul class="hero__list">
                 <li class="hero__item">
-                    <a class="hero__link" href="https://github.com/paaulinaaas" target="_blank">
+                    <a class="hero__link no-underline" href="https://github.com/paaulinaaas" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="hero__item">
-                    <a class="hero__link" href="https://www.linkedin.com/in/paulina-sikora089/" target="_blank">
+                    <a class="hero__link no-underline" href="https://www.linkedin.com/in/paulina-sikora089/" target="_blank">
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                     </a>
                 </li>
@@ -94,7 +94,8 @@
         </div>
         </div>
     </section>
-    <section class="skills">
+    
+    <section class="skills" id="skills">
         <div class="wrapper">
             <h2 class="heading-2">Skills</h2>
             <div class="skills__container">
@@ -189,22 +190,23 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    
+    <section class="portfolio" id="portfolio">
         <h2 class="heading-2">Portfolio</h2>
         <ul class="portfolio__list">
             <li class="portfolio__item">
                 <img class="img-responsive" src="./img/masterlab.jpg">
                 <div class="portfolio__info">
-                    <h3>Masterlab</h3>
-                    <span>HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
-                    <ul class="portfolio__list">
-                        <li class="portfolio__list-item">
-                            <a href="" >
+                    <h3 class="portfolio__title">Masterlab</h3>
+                    <span class="portfolio__text">HTML5, CSS3, Forms, Javascript</span>
+                    <ul class="portfolio__socials">
+                        <li class="portfolio__socials-item">
+                            <a href="https://github.com/paaulinaaas/PSD_Masterlab" >
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
-                        <li class="portfolio__list-item">
-                            <a href="" >
+                        <li class="portfolio__socials-item">
+                            <a href="https://paaulinaaas.github.io/PSD_Masterlab/" >
                                 <i class="fas fa-search"></i>
                             </a>
                         </li>
@@ -214,16 +216,16 @@
             <li class="portfolio__item">
                 <img class="img-responsive" src="./img/rockpaper.jpg">
                 <div class="portfolio__info">
-                    <h3>Masterlab</h3>
-                    <span>HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
-                    <ul class="portfolio__list">
-                        <li class="portfolio__list-item">
-                            <a href="" >
+                    <h3 class="portfolio__title">Rock Paper Scissors game</h3>
+                    <span class="portfolio__text">HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
+                    <ul class="portfolio__socials">
+                        <li class="portfolio__socials-item">
+                            <a href="https://github.com/paaulinaaas/Sciz_Stone_Paper_9.7" >
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
-                        <li class="portfolio__list-item">
-                            <a href="" >
+                        <li class="portfolio__socials-item">
+                            <a href="https://paaulinaaas.github.io/Sciz_Stone_Paper_9.7/" >
                                 <i class="fas fa-search"></i>
                             </a>
                         </li>
@@ -233,35 +235,16 @@
             <li class="portfolio__item">
                 <img class="img-responsive" src="./img/phototime.jpg">
                 <div class="portfolio__info">
-                    <h3>Masterlab</h3>
-                    <span>HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
-                    <ul class="portfolio__list">
-                        <li class="portfolio__list-item">
-                            <a href="" >
+                    <h3 class="portfolio__title">Photo Time</h3>
+                    <span class="portfolio__text">HTML5, CSS3, SASS, Animations</span>
+                    <ul class="portfolio__socials">
+                        <li class="portfolio__socials-item">
+                            <a href="https://github.com/paaulinaaas/PSD_DesignLab" >
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
-                        <li class="portfolio__list-item">
-                            <a href="" >
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="portfolio__item">
-                <img class="img-responsive" src="./img/masterlab.jpg">
-                <div class="portfolio__info">
-                    <h3>Masterlab</h3>
-                    <span>HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
-                    <ul class="portfolio__list">
-                        <li class="portfolio__list-item">
-                            <a href="" >
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                        <li class="portfolio__list-item">
-                            <a href="" >
+                        <li class="portfolio__socials-item">
+                            <a href="https://paaulinaaas.github.io/PSD_DesignLab/" >
                                 <i class="fas fa-search"></i>
                             </a>
                         </li>
@@ -271,15 +254,15 @@
             <li class="portfolio__item">
                 <img class="img-responsive" src="./img/rockpaper.jpg">
                 <div class="portfolio__info">
-                    <h3>Masterlab</h3>
-                    <span>HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
-                    <ul class="portfolio__list">
-                        <li class="portfolio__list-item">
+                    <h3 class="portfolio__title">Masterlab</h3>
+                    <span class="portfolio__text">HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
+                    <ul class="portfolio__socials">
+                        <li class="portfolio__socials-item">
                             <a href="" >
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
-                        <li class="portfolio__list-item">
+                        <li class="portfolio__socials-item">
                             <a href="" >
                                 <i class="fas fa-search"></i>
                             </a>
@@ -288,26 +271,48 @@
                 </div>
             </li>
             <li class="portfolio__item">
-                <img class="img-responsive" src="./img/phototime.jpg">
+                <img class="img-responsive" src="./img/books.jpg">
                 <div class="portfolio__info">
-                    <h3>Masterlab</h3>
-                    <span>HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
-                    <ul class="portfolio__list">
-                        <li class="portfolio__list-item">
+                    <h3 class="portfolio__title">Books library</h3>
+                    <span class="portfolio__text">HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
+                    <ul class="portfolio__socials">
+                        <li class="portfolio__socials-item">
+                            <a href="https://github.com/paaulinaaas/JS-books-library" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="portfolio__socials-item">
+                            <a href="https://paaulinaaas.github.io/JS-books-library/" >
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="portfolio__item">
+                <img class="img-responsive" src="./img/kanban.jpg">
+                <div class="portfolio__info">
+                    <h3 class="portfolio__title">Masterlab</h3>
+                    <span class="portfolio__text">HTML5, CSS3, SASS, Webpack, Javascript(ES6), Animations</span>
+                    <ul class="portfolio__socials">
+                        <li class="portfolio__socials-item">
                             <a href="" >
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
-                        <li class="portfolio__list-item">
+                        <li class="portfolio__socials-item">
                             <a href="" >
                                 <i class="fas fa-search"></i>
                             </a>
                         </li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </section>
 </main>
 
-<footer class="footer">
+<footer class="footer" id="contact">
     <div class="footer__container">
 
         <div class="bird-container bird-container--one">
@@ -330,61 +335,15 @@
         <div class="footer__contact">
             <h2 class="heading-2 footer__heading">Contact</h2>
             <div class="footer__contact-details">
-                <a href="mailto:psikora089@gmai.com">psikora089@gmail.com</a>
+                <a href="mailto:psikora089@gmai.com" class="no-underline">psikora089@gmail.com</a>
             </div>
             <div class="footer__contact-details">+31 685 493 331</div>
         </div>
     </div>
     <div class="footer__credits">
-        Created with <i class="fa fa-heart" aria-hidden="true"></i> by Paulina Sikora. Copyright © 2019. All Rights Reserved
+        Created with <i class="fa fa-heart" aria-hidden="true"></i> by Paulina Sikora.<br> Copyright © 2019. All Rights Reserved
     </div>
 </footer>
-<script type="text/javascript">
-    console.log('test')
-    var lastKnownScrollY = 0;
-    var currentScrollY = 0;
-    var ticking = false;
-    var idOfHeader = 'header';
-    var eleHeader = null;
-    const classes = {
-        pinned: 'header-pin',
-        unpinned: 'header-unpin',
-    };
-    function onScroll() {
-        currentScrollY = window.pageYOffset;
-        requestTick();
-    }
-    function requestTick() {
-        if (!ticking) {
-            requestAnimationFrame(update);
-        }
-        ticking = true;
-    }
-    function update() {
-        if (currentScrollY < lastKnownScrollY) {
-            pin();
-        } else if (currentScrollY > lastKnownScrollY) {
-            unpin();
-        }
-        lastKnownScrollY = currentScrollY;
-        ticking = false;
-    }
-    function pin() {
-        if (eleHeader.classList.contains(classes.unpinned)) {
-            eleHeader.classList.remove(classes.unpinned);
-            eleHeader.classList.add(classes.pinned);
-        }
-    }
-    function unpin() {
-        if (eleHeader.classList.contains(classes.pinned) || !eleHeader.classList.contains(classes.unpinned)) {
-            eleHeader.classList.remove(classes.pinned);
-            eleHeader.classList.add(classes.unpinned);
-        }
-    }
-    window.onload = function() {
-        eleHeader = document.querySelector('.header');
-        document.addEventListener('scroll', onScroll, false);
-    }
-</script>
+
 </body>
 </html>

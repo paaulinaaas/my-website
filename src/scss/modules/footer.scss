@@ -1,5 +1,5 @@
 .footer {
-  background: url("../img/bridge.jpg");
+  background: url("../img/bridge.jpg")no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -8,19 +8,15 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
   }
   &__info {
     position: absolute;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center;
     font-size: 1.25rem;
-  }
-  &__fa {
-    font-size: 2.5rem;
-    z-index: -1;
   }
   &__contact {
     display: flex;
@@ -33,9 +29,10 @@
   &__credits {
     text-align: center;
     margin: 0.5rem;
-  }
-  &__heading {
-    padding-top: 4rem;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 1rem;
   }
 }
 

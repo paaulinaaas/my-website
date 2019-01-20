@@ -1,29 +1,25 @@
 //HERO
 
 .hero {
-  position: relative;
   @include center;
+  position: relative;
   flex-direction: column;
-  height: calc(100vh - 5.125em);
+  height: calc(100vh - 5rem);
   letter-spacing: 0;
   &__title {
     font-size: 2.5em;
     text-transform: uppercase;
     display: flex;
     flex-wrap: wrap;
-    padding: 2px;
     justify-content: center;
     color: $color-main1;
-    margin: 0;
+    margin: 2rem 0 0;
     padding: 1.25rem;
     z-index: 1;
-    @media #{$mediaMedium} {
-
-    }
-    &--light {
-      color: $color-main2;
-      padding-left: 0.25em;
-    }
+      &--light {
+        color: $color-main2;
+        padding-left: 0.25em;
+      }
   }
   &__subtitle {
     font-size: 1.625em;
@@ -50,9 +46,6 @@
   &__link {
     color: $color-light-grey;
     font-size: 1.125em;
-    &:hover {
-
-    }
   }
   .balls-container {
     top: -2em;
@@ -61,5 +54,4 @@
       display: none;
     }
   }
-
 }

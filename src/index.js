@@ -1,56 +1,60 @@
 import style from './scss/style.scss';
 
-const inputs = document.querySelectorAll('.input');
-const buttons = document.querySelectorAll('.btn');
+let lastKnownScrollY = 0,
+    currentScrollY = 0,
+    ticking = false,
+    eleHeader = null;
 
-const toggleForm = () => {
-    inputs.forEach(input => {
-        input.classList.remove('warning')
+const classes = {
+    pinned: 'header-pin',
+    unpinned: 'header-unpin',
+    active: 'nav--active'
+};
+
+function onScroll() {
+    currentScrollY = window.pageYOffset;
+    requestTick();
+}
+
+function requestTick() {
+    if (!ticking) {
+        requestAnimationFrame(update);
+    }
+    ticking = true;
+}
+
+function update() {
+    if (currentScrollY < lastKnownScrollY) {
+        pin();
+    } else if (currentScrollY > lastKnownScrollY) {
+        unpin();
+    }
+    lastKnownScrollY = currentScrollY;
+    ticking = false;
+}
+function pin() {
+    if (eleHeader.classList.contains(classes.unpinned)) {
+        eleHeader.classList.remove(classes.unpinned);
+        eleHeader.classList.add(classes.pinned);
+    }
+}
+function unpin() {
+    if (eleHeader.classList.contains(classes.pinned) || !eleHeader.classList.contains(classes.unpinned) ) {
+        eleHeader.classList.remove(classes.pinned);
+        eleHeader.classList.add(classes.unpinned);
+    }
+}
+window.onload = function() {
+        eleHeader = document.querySelector('.header');
+        document.addEventListener('scroll', onScroll, false);
+    }
+
+    document.querySelector('.nav__bar').addEventListener('click', () => {
+        document.querySelector('.nav').classList.toggle(classes.active);
     })
-    buttons.forEach(btn => {
-        buttons.forEach(btn => {
-            btn.classList.remove('btn--active')
+
+    document.querySelectorAll('.nav__item').forEach((item) => {
+        item.addEventListener('click', () => {
+            document.querySelector('.nav').classList.remove(classes.active)
         })
-        event.target.classList.add('btn--active')
-        if(event.target.classList.contains('btn__signup')) {
-            document.getElementById('logIn').classList.remove('active')
-            document.getElementById('signUp').classList.add('active')
-        } else if (event.target.classList.contains('btn__login')) {
-            document.getElementById('signUp').classList.remove('active')
-            document.getElementById('logIn').classList.add('active') // let login = true to let signup = false
-        }
     })
-}
-
-
-const formValidate = () => {
-    for (let i = 0; i <inputs.length; i++) {
-        inputs[i].classList.remove('warning');
-        if (!inputs[i].value) {
-            console.log(inputs[i])
-            console.log('a')
-            inputs[i].classList.add('warning')
-        }
-        let inputType = inputs[i].getAttribute('type')
-        if (inputType == 'email') {
-            validateEmail(inputs[i])
-        }
-    }
-}
-
-//EMAIL VALIDATION (for adding extra 'warning' class when not valid)
-const validateEmail = (email) => {
-    if (/\S+@\S+\.\S+/.test(email.value)) {
-        return (true)
-    } else {
-        email.classList.add('warning')
-        return (false)
-    }
-}
-
-buttons.forEach((btn) => {
-    btn.addEventListener('click', toggleForm)
-})
-document.querySelectorAll('.input__submit').forEach((submit) => {
-    submit.addEventListener('click', formValidate)
-})

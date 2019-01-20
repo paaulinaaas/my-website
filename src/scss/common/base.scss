@@ -19,7 +19,6 @@ body {
 
 h1, h2, h3, h4 {
   color: inherit;
-  padding-top: 5rem;
 }
 
 a {
@@ -47,12 +46,31 @@ a {
   }
 }
 
+.no-underline {
+  &.active,
+  &:hover {
+    &:before {
+      transform: scaleX(0);
+    }
+  }
+}
+
 button {
   padding: 0;
   color: inherit;
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+section {
+  @media #{$mediaMedium} {
+    padding-top: 4rem;
+  }
+}
+
+li {
+  list-style-type: none;
 }
 
 .heading-1 {
@@ -124,11 +142,6 @@ body {
   padding: 0 1.25rem;
 }
 
-//ABOUT
-
-.u-uppercase {
-  text-transform: uppercase;
-}
 
 
 
