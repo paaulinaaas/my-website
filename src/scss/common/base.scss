@@ -63,12 +63,6 @@ button {
   cursor: pointer;
 }
 
-section {
-  @media #{$mediaMedium} {
-    padding-top: 4rem;
-  }
-}
-
 li {
   list-style-type: none;
 }
@@ -109,6 +103,16 @@ li {
     margin: 0 auto 4rem;
     padding: 0;
   }
+}
+.line {
+  display: block;
+  width: 100vw;
+  border-bottom: 4px solid $color-main1;
+  margin: 4rem 0;
+}
+
+.space {
+  padding: 4rem;
 }
 
 .img-responsive {

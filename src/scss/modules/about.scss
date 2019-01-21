@@ -1,24 +1,36 @@
 @import "../common/base";
 
 .about {
-  @include center;
-  background: url(../img/background3.jpg)no-repeat;
-  background-size: cover;
-  padding: 4rem 1rem;
-  background-attachment: fixed;
-  @media #{$mediaMedium} {
-    padding: 4rem 2rem;
+  background: #DFE0E2;
+  width: 100%;
+  &__grid {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: minmax(1fr, auto);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2rem;
+    width: 100%;
+    padding: 4rem 0;
   }
+  &__heading {
+  padding: 2rem;
+    @media #{$mediaSmall} {
+      padding-top: 0;
+    }
+}
   &__container {
-    @include center;
+    display: flex;
     flex-direction: column;
-    background: #fff;
-    padding: 2rem;
-    text-align: center;
-    letter-spacing: 2px;
+    background: $light;
+    padding: 1.25rem;
+    text-align: justify;
+    letter-spacing: 0.125rem;
     position: relative;
-    outline: 4px solid $light;
-    outline-offset: 8px;
+    outline: 0.25rem solid $light;
+    outline-offset: 0.5rem;
+    @media #{$mediaSmall} {
+      padding: 3.25rem;
+    }
     .balls-container {
       display: none;
       @media #{$mediaMedium} {
@@ -28,17 +40,36 @@
         padding: 4rem;
       }
     }
+    &--small {
+      grid-column: 2 /12;
+      grid-row: auto;
+      @media #{$mediaMedium} {
+        grid-column: 2 /9;
+        grid-row: 5 / 9;
+      }
+    }
+    &--big {
+      grid-column: 2 / 12;
+      grid-row: 1 / auto;
+      z-index: 1;
+      @media #{$mediaMedium} {
+        grid-column: 3 / 11;
+        grid-row: 2 / 4;
+      }
+    }
   }
   &__text {
     text-align: justify;
     margin: 0.6rem 0;
   }
   &__img {
-    width: 160px;
-    margin: 0.75rem;
-    border-radius: 50%;
+    width: 150px;
+    margin: 1rem auto;
     border-radius: 50%;
 
+  }
+  & +{
+    background: blue;
   }
 }
 
