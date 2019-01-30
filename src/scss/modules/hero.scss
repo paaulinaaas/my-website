@@ -4,10 +4,11 @@
   @include center;
   position: relative;
   flex-direction: column;
-  height: calc(100vh - 5rem);
+  min-height: calc(100vh - 5rem);
   letter-spacing: 0;
   &__title {
     font-size: 2.5em;
+    font-weight: bold;
     text-transform: uppercase;
     display: flex;
     flex-wrap: wrap;

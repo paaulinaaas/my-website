@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "reset-css": "^4.0.1"
   }
 }

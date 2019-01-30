@@ -1,4 +1,8 @@
 import style from './scss/style.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 let lastKnownScrollY = 0,
     currentScrollY = 0,

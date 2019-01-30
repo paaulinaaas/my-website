@@ -41,7 +41,7 @@
       }
     }
     &--small {
-      grid-column: 2 /12;
+      grid-column: 2 /11;
       grid-row: auto;
       @media #{$mediaMedium} {
         grid-column: 2 /9;
@@ -49,7 +49,7 @@
       }
     }
     &--big {
-      grid-column: 2 / 12;
+      grid-column: 2 / 11;
       grid-row: 1 / auto;
       z-index: 1;
       @media #{$mediaMedium} {
